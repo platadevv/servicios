@@ -32,12 +32,12 @@ then
 
     rm -r /var/www/html
 
-    cp cms/drupal950 /var/www/
-    cp cms/drupal1016 /var/www/
-    cp cms/joomla444 /var/www/
-    cp cms/moodle433 /var/www/
-    cp cms/phpmyadmin521 /var/www/
-    cp cms/wordpress /var/www/
+    cp -r cms/drupal950 /var/www/
+    cp -r cms/drupal1016 /var/www/
+    cp -r cms/joomla444 /var/www/
+    cp -r cms/moodle433 /var/www/
+    cp -r cms/phpmyadmin521 /var/www/
+    cp -r cms/wordpress /var/www/
 
 
     mkdir /var/www/web1
