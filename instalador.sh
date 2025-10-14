@@ -44,12 +44,24 @@ then
     mv config_files/web.html /var/www/web1/
     mv config_files/apacheweb.conf /etc/apache2/sites-available/
 
+    cp config_files/durpal1016.conf /etc/apache2/sites-available/
+    cp config_files/moodle.conf /etc/apache2/sites-available/
+    cp config_files/joomla.conf /etc/apache2/sites-available/
+    cp config_files/wordpress.conf /etc/apache2/sites-available/
+    cp config_files/phpmyadmin.conf /etc/apache2/sites-available/
+
     echo "Dando permisos y cambiando propietarios de /var/www/ "
     sleep 3
     chmod -R 755 /var/www/
     chown -R www-data:www-data /var/www/
 
+
     a2ensite apacheweb.conf
+    a2ensite drupal1016.conf
+    a2ensite moodle.conf
+    a2ensite wordpress.conf
+    a2ensite joomla.conf
+    a2ensite phpmyadmin.conf
 
     systemctl restart apache2.service
 
