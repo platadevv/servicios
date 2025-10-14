@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [$(whoami) == "root"]
+if [ $(whoami) == "root" ]
 then
 
     echo "Reiniciando servicio networking"
