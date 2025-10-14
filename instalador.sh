@@ -3,7 +3,7 @@
 if [ $(whoami) == "root" ]
 then
 
-    echo "Reiniciando servicio networking"
+    echo "Reiniciando servicio networking Parte 1"
     systemctl restart networking.service
 
     echo "Actualizando..."
@@ -17,6 +17,9 @@ then
 
     echo "instalando php"
     apt install -y php
+
+    echo "Reiniciando servicio networking Parte 2"
+    systemctl restart networking.service
 
     echo "Instalando todos los paquetes de php"
     apt install -y php-mysql php-gd php-mcrypt php-curl php-xmlrpc php-intl php-soap
