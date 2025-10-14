@@ -22,7 +22,7 @@ then
     systemctl restart networking.service
 
     echo "Instalando todos los paquetes de php"
-    apt install -y php-mysql php-gd php-mcrypt php-curl php-xmlrpc php-intl php-soap
+    apt install -y php-mysql php-gd php-mcrypt php-curl php-xmlrpc php-intl php-soap php-mbstring php-xml php-zip
     echo "Se ha completado la instalacion con existo"
 
     
