@@ -25,7 +25,9 @@ then
     apt install -y php-mysql php-gd php-mcrypt php-curl php-xmlrpc php-intl php-soap
     echo "Se ha completado la instalacion con existo"
 
+    
     echo "Ajustando ficheros para configuraciones de CMS"
+    sleep 3
     a2dissite 000-default.conf
 
     rm -r /var/www/html
@@ -41,6 +43,11 @@ then
     mkdir /var/www/web1
     mv config_files/web.html /var/www/web1/
     mv config_files/apacheweb.conf /etc/apache2/sites-available/
+
+    echo "Dando permisos y cambiando propietarios de /var/www/"
+    sleep 3
+    chmod -R 755 /var/www/
+    chown -R www-data:www-data /var/www/
 
     a2ensite apacheweb.conf
 
