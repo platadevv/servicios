@@ -44,7 +44,7 @@ then
     mv config_files/web.html /var/www/web1/
     mv config_files/apacheweb.conf /etc/apache2/sites-available/
 
-    echo "Dando permisos y cambiando propietarios de /var/www/"
+    echo "Dando permisos y cambiando propietarios de /var/www/ "
     sleep 3
     chmod -R 755 /var/www/
     chown -R www-data:www-data /var/www/
