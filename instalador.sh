@@ -44,7 +44,7 @@ then
     cp config_files/web.html /var/www/web1/
     cp config_files/apacheweb.conf /etc/apache2/sites-available/
 
-    cp config_files/durpal1016.conf /etc/apache2/sites-available/
+    cp config_files/drupal1016.conf /etc/apache2/sites-available/
     cp config_files/moodle.conf /etc/apache2/sites-available/
     cp config_files/joomla.conf /etc/apache2/sites-available/
     cp config_files/wordpress.conf /etc/apache2/sites-available/
