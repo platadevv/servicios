@@ -32,17 +32,17 @@ then
 
     rm -r /var/www/html
 
-    mv cms/drupal-950 /var/www/
-    mv cms/drupal-1016 /var/www/
-    mv cms/joomla-444 /var/www/
-    mv cms/moodle-433 /var/www/
-    mv cms/phpmyadmin-521 /var/www/
-    mv cms/wordpress /var/www/
+    cp cms/drupal950 /var/www/
+    cp cms/drupal1016 /var/www/
+    cp cms/joomla444 /var/www/
+    cp cms/moodle433 /var/www/
+    cp cms/phpmyadmin521 /var/www/
+    cp cms/wordpress /var/www/
 
 
     mkdir /var/www/web1
-    mv config_files/web.html /var/www/web1/
-    mv config_files/apacheweb.conf /etc/apache2/sites-available/
+    cp config_files/web.html /var/www/web1/
+    cp config_files/apacheweb.conf /etc/apache2/sites-available/
 
     cp config_files/durpal1016.conf /etc/apache2/sites-available/
     cp config_files/moodle.conf /etc/apache2/sites-available/
