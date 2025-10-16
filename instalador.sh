@@ -67,7 +67,7 @@ then
 
     read -p "¿Quieres que se genere un usuario para el phpmyadmin?(s/n)" respuesta
 
-    if [[ "$respuesta" =~ ^[Nn]$ ]];
+    if [[ "$respuesta" =~ ^[Ss]$ ]];
     then
 
         # Preguntar si se usa el usuario por defecto
