@@ -95,6 +95,7 @@ then
     else
         echo "Saliendo..."
         exit
+    fi
 else
     echo "Para ejecutar el script instalador debes ser Root o con sudo"
 fi
