@@ -66,7 +66,7 @@ then
 
     systemctl restart apache2.service
 
-    read -p "ℹ️ ¿Quieres que se genere un usuario para el phpmyadmin?(s/n)" respuesta
+    read -p " ℹ️ ¿Quieres que se genere un usuario para el phpmyadmin?(s/n)" respuesta
 
     if [[ "$respuesta" =~ ^[Ss]$ ]];
     then
