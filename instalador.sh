@@ -43,6 +43,7 @@ then
     mkdir /var/www/web1
     cp config_files/web.html /var/www/web1/
     cp config_files/apacheweb.conf /etc/apache2/sites-available/
+    echo "Copiando en /var/www/ todos los portales... ⏳"
 
     cp config_files/drupal1016.conf /etc/apache2/sites-available/
     cp config_files/moodle.conf /etc/apache2/sites-available/
@@ -65,14 +66,14 @@ then
 
     systemctl restart apache2.service
 
-    read -p "¿Quieres que se genere un usuario para el phpmyadmin?(s/n)" respuesta
+    read -p "ℹ️ ¿Quieres que se genere un usuario para el phpmyadmin?(s/n)" respuesta
 
     if [[ "$respuesta" =~ ^[Ss]$ ]];
     then
 
         # Preguntar si se usa el usuario por defecto
-        echo "El usuario por defecto es 'phpmaster'."
-        read -p "¿Querés usar este nombre de usuario? (s/n): " respuesta
+        echo "⚠️ El usuario por defecto es 'phpmaster'."
+        read -p "¿Quieres usar este nombre de usuario? (s/n): " respuesta
 
         if [[ "$respuesta" =~ ^[Nn]$ ]]; then
             read -p "Ingresá el nuevo nombre de usuario: " usuario
@@ -91,7 +92,7 @@ then
         FLUSH PRIVILEGES;
         "
 
-        echo "Usuario '${usuario}' creado correctamente (o ya existía)."
+        echo "Usuario '${usuario}' creado correctamente (o ya existía). ✅"
     else
         echo "Saliendo..."
         exit
