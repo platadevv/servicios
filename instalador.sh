@@ -68,7 +68,7 @@ then
 
     read -p " ℹ️ ¿Quieres que se genere un usuario para el phpmyadmin?(s/n)" respuesta
 
-    if [[ "$respuesta" =~ ^[Ss]$ ]];
+    : 'if [[ "$respuesta" =~ ^[Ss]$ ]];
     then
 
         # Preguntar si se usa el usuario por defecto
@@ -96,7 +96,7 @@ then
     else
         echo "Saliendo..."
         exit
-    fi
+    fi'
 else
     echo "Para ejecutar el script instalador debes ser Root o con sudo"
 fi
