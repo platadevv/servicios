@@ -59,3 +59,8 @@
 
 echo "Recargando apache2"
 systemctl restart apache2.service
+
+echo "Dando permisos y cambiando propietarios de /var/www/"
+sleep 2
+chmod -R 755 /var/www/
+chown -R www-data:www-data /var/www/
