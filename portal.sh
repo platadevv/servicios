@@ -56,3 +56,6 @@
             exit 1
             ;;
     esac
+
+echo "Recargando apache2"
+systemctl restart apache2.service
