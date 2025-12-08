@@ -26,12 +26,13 @@ echo "⏳ Creando usuario '${usuario}' con privilegios de ROOT..."
 
 mysql -u root -p"$mysql_root_pass" <<EOF
 CREATE USER IF NOT EXISTS '${usuario}'@'%' IDENTIFIED BY '${clave}';
+ALTER USER '${usuario}'@'%' IDENTIFIED BY '${clave}';
 GRANT ALL PRIVILEGES ON *.* TO '${usuario}'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 EOF
 
 if [ $? -eq 0 ]; then
-    echo "✅ Usuario '${usuario}' creado con privilegios TOTALES (tipo root)."
+    echo "✅ Usuario '${usuario}' creado/actualizado con privilegios TOTALES (tipo root)."
 else
-    echo "❌ Error al crear el usuario."
+    echo "❌ Error al crear o actualizar el usuario."
 fi
