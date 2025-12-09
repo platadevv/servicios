@@ -16,6 +16,8 @@ if [[ "$respuesta" =~ ^[Nn]$ ]]; then
 else
     usuario="phpmaster"
     clave="phpmaster"
+    echo "LA CONTRASEÑA DEL PHPMASTER ES --->> phpmaster <<---"
+    sleep 1
 fi
 
 # Pedir contraseña de root

@@ -11,6 +11,7 @@
     echo "4) Moodle 4.3.3"
     echo "5) PhpMyAdmin 5.2.1"
     echo "6) WordPress"
+    echo "7) ---->> Joomla601 <<-----"
     echo "===================================="
     read -p "Selecciona una opción (1-6): " opcion
 
@@ -50,6 +51,12 @@
             mv cms/wordpress /var/www/
             cp config_files/wordpress.conf /etc/apache2/sites-available/
             a2ensite wordpress.conf
+            ;;
+        7)
+            echo "Instalando Joomla601..."
+            mv cms/joomla601 /var/www/
+            cp config_files/joomla.conf /etc/apache2/sites-available/
+            a2ensite joomla.conf
             ;;
         *)
             echo "❌ Opción no válida"
