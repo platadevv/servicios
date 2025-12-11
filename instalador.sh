@@ -10,6 +10,8 @@ if [ "$(whoami)" == "root" ]; then
     echo "Instalado apache2..."
     apt install -y apache2
 
+    apt install mysql-server -y
+
     echo "Instalado mariadb-server"
     apt install -y mariadb-server
 
